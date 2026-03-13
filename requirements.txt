@@ -1,7 +1,5 @@
 streamlit
 qrcode
 pillow
-opencv-python-headless
-pyzbar
 pandas
-numpy
+streamlit-qrcode-scanner
