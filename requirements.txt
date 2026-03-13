@@ -1,2 +1,6 @@
 streamlit
 pandas
+random
+qrcode
+pillow
+streamlit-qr-scanner
