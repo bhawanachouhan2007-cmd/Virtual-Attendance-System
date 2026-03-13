@@ -1,4 +1,5 @@
 streamlit
 qrcode
 pillow
-streamlit-qr-scanner
+opencv-python-headless
+pyzbar
