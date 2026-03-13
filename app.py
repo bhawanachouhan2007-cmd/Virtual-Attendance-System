@@ -3,7 +3,7 @@ import sqlite3 as sql
 from datetime import datetime
 import random
 import qrcode
-from streamlit_qr_scanner import qr_scanner
+
 
 # Database connection
 conn = sql.connect("attendance.db", check_same_thread=False)
