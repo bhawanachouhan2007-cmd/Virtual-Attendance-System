@@ -2,4 +2,4 @@ streamlit
 qrcode
 pillow
 pandas
-streamlit-qrcode-scanner
+
