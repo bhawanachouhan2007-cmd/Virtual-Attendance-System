@@ -165,7 +165,7 @@ elif menu == "Student":
             time_diff = (current_time - otp_time).total_seconds()
 
             if time_diff > 30:
-                st.error("OTP Expired. Ask teacher to generate new QR.")
+                st.error("OTP Expired. Attendance Denied.")
                 st.stop()
 
             # OTP validation
