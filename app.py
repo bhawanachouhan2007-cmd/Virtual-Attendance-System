@@ -3,6 +3,7 @@ import sqlite3 as sql
 from datetime import datetime
 import random
 import qrcode
+import pandas as pd
 
 # session state for OTP
 if "current_otp" not in st.session_state:
@@ -89,7 +90,7 @@ if menu == "Teacher":
             if st.button("Show Attendance"):
 
                 cursor.execute(
-                    "SELECT * FROM attendance WHERE Date=?",
+                    "SELECT * FROM attendance WHERE Date=? ORDER BY Roll_no.",
                     (date,)
                 )
 
@@ -99,8 +100,9 @@ if menu == "Teacher":
                     st.warning("No Attendance Found")
 
                 else:
-                    for r in records:
-                        st.write(r)
+                    df = pd.DataFrame(records,
+                    columns=["Roll No.", "Name", "Date", "Time", "Status"])
+                    st.dataframe(df)
 
         # COUNT STUDENTS
         elif option == "Total Students":
