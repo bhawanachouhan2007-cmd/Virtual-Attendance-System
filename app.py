@@ -113,7 +113,7 @@ if menu == "Teacher":
 
                 cursor.execute(
                     "SELECT COUNT(Roll_no) FROM attendance WHERE Date=?",
-                    (date,)
+                    (date,Roll_no,)
                 )
 
                 total = cursor.fetchone()
