@@ -136,8 +136,10 @@ if menu == "Teacher":
         # SUBJECT ATTENDANCE
         elif option == "Subject Attendance":
 
-            subject = st.text_input("Enter Subject").lower()
-
+            subject = st.selectbox(
+                "Select Subject",
+                ["DBMS","Web Technology"]
+            )
             if st.button("Show Subject Attendance"):
 
                 cursor.execute(
