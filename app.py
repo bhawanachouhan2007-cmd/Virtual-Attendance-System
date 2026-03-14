@@ -90,8 +90,8 @@ if menu == "Teacher":
             if st.button("Show Attendance"):
 
                 cursor.execute(
-                    "SELECT * FROM attendance WHERE Date=? ORDER BY Roll_no.",
-                    (date,Roll_no)
+                    "SELECT * FROM attendance WHERE Date=? ORDER BY Roll_no",
+                    (date,)
                 )
 
                 records = cursor.fetchall()
