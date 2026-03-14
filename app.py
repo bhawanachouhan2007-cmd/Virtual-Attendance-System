@@ -91,7 +91,7 @@ if menu == "Teacher":
 
                 cursor.execute(
                     "SELECT * FROM attendance WHERE Date=? ORDER BY Roll_no.",
-                    (date,)
+                    (date,Roll_no,)
                 )
 
                 records = cursor.fetchall()
@@ -113,7 +113,7 @@ if menu == "Teacher":
 
                 cursor.execute(
                     "SELECT COUNT(Roll_no) FROM attendance WHERE Date=?",
-                    (date,Roll_no,)
+                    (date,)
                 )
 
                 total = cursor.fetchone()
